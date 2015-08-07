@@ -1,0 +1,57 @@
+@import "../node_modules/patternfly/less/patternfly.less";
+
+
+// Font path
+@fa-font-path:      "../node_modules/patternfly/components/font-awesome/fonts/";
+@font-path:         "../node_modules/patternfly/dist/fonts";
+@icon-font-path:    "../node_modules/patternfly/components/bootstrap/fonts/";
+
+//
+// Blank Slate
+// --------------------------------------------------
+
+body{
+  background: #f4f4f4;
+}
+
+.navbar-pf-lg{
+  .navbar-brand {
+    padding: 12px 0;
+  }  
+  .navbar-utility {
+    > li > a {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    li.dropdown > .dropdown-toggle {
+      .pficon-user {
+        top: 12px;
+      }
+    }    
+  }  
+}
+
+
+.header{
+  margin: 30px 0 20px 0;
+  .search-pf{
+    width: 300px;
+  }
+  .dropdown-menu{
+    right: 0;
+    left: auto;
+  }
+}
+
+.thumbnail{
+  &:hover{
+    .favorite{ display: block;}
+  }  
+}
+.favorite{
+  position: absolute;
+  top: 10px;
+  right: 33px;
+  display: none;
+}
+
