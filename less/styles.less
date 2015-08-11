@@ -31,9 +31,17 @@ body{
   }  
 }
 
-
 .header{
   margin: 30px 0 20px 0;
+  
+  .actions{
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: @screen-sm-min) {     .pull-right;}
+.glyphicon{
+  display: none;
+}    
+  }
+  
   .search-pf{
     width: 300px;
   }
@@ -46,12 +54,33 @@ body{
 .thumbnail{
   &:hover{
     .favorite{ display: block;}
-  }  
+  }
+  img{
+    max-width: 200px;
+    max-height: 100px;
+  }
 }
 .favorite{
   position: absolute;
   top: 10px;
-  right: 33px;
+  right: 29px;
+  background:#fff;
+  line-height: 24px;
+  width: 26px;
+  padding-bottom: 2px;
+  text-align: center;
+  border-radius: 15px;
+//  box-shadow: 0 0 2px rgba(0,0,0,.5);
+  &:hover{
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+  }
   display: none;
+  &.active{
+    display: block;  
+  }
 }
 
+
+.selectpicker{
+  display: none;
+}
