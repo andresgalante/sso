@@ -54,6 +54,8 @@ body{
 .thumbnail{
   &:hover{
     .favorite{ display: block;}
+    .name-icon{background: @link-hover-color;}
+    text-decoration: none;
   }
   img{
     max-width: 200px;
@@ -70,7 +72,6 @@ body{
   padding-bottom: 2px;
   text-align: center;
   border-radius: 15px;
-//  box-shadow: 0 0 2px rgba(0,0,0,.5);
   &:hover{
     box-shadow: 0 0 4px rgba(0,0,0,.5);
   }
@@ -84,3 +85,58 @@ body{
 .selectpicker{
   display: none;
 }
+
+.name{
+  display: block;
+  font-size: @font-size-h2;
+  font-weight: 300; 
+  text-align: center;
+  background: @gray-lighter;
+//  width: 200px;
+  line-height: 100px;
+  padding: 0;
+  margin: 0;
+}
+.name-icon{
+    display:inline-block;
+    background-color: @link-color; 
+    color: rgba(255,255,255,.9);
+    font-size: @font-size-base * 2.5;
+    font-weight: lighter;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    border-radius: @border-radius-base;
+    &.rounded{
+      border-radius: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

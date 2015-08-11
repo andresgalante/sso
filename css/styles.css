@@ -11758,8 +11758,14 @@ body {
   right: 0;
   left: auto;
 }
+.thumbnail:hover {
+  text-decoration: none;
+}
 .thumbnail:hover .favorite {
   display: block;
+}
+.thumbnail:hover .name-icon {
+  background: #00618a;
 }
 .thumbnail img {
   max-width: 200px;
@@ -11785,4 +11791,28 @@ body {
 }
 .selectpicker {
   display: none;
+}
+.name {
+  display: block;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+  background: #eeeeee;
+  line-height: 100px;
+  padding: 0;
+  margin: 0;
+}
+.name-icon {
+  display: inline-block;
+  background-color: #0099d3;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 30px;
+  font-weight: lighter;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  border-radius: 1px;
+}
+.name-icon.rounded {
+  border-radius: 25px;
 }
