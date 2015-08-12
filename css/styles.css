@@ -11776,15 +11776,16 @@ body {
   top: 10px;
   right: 29px;
   background: #fff;
-  line-height: 24px;
-  width: 26px;
+  border: 1px solid #fff;
+  line-height: 22px;
+  width: 24px;
   padding-bottom: 2px;
   text-align: center;
   border-radius: 15px;
   display: none;
 }
 .favorite:hover {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #eeeeee;
 }
 .favorite.active {
   display: block;
@@ -11794,7 +11795,7 @@ body {
 }
 .name {
   display: block;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 300;
   text-align: center;
   background: #eeeeee;
@@ -11803,7 +11804,9 @@ body {
   margin: 0;
 }
 .name-icon {
+  margin-right: 8px;
   display: inline-block;
+  vertical-align: middle;
   background-color: #0099d3;
   color: rgba(255, 255, 255, 0.9);
   font-size: 30px;
@@ -11812,7 +11815,5 @@ body {
   text-align: center;
   width: 50px;
   border-radius: 1px;
-}
-.name-icon.rounded {
   border-radius: 25px;
 }
