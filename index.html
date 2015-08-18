@@ -4,10 +4,11 @@
     <title>Dashboard - PatternFly</title>
     <meta charset="utf-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
     <link href="css/styles.css" rel="stylesheet" media="screen, print">
   </head>
   
-  <body>
+  <body class="cards-pf">
     <nav class="navbar navbar-default navbar-pf navbar-pf-lg" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
@@ -71,18 +72,9 @@
       </div>
     </nav>
     
-    
     <div class="container-fluid">
       
       <div class="header">
-        <div class="actions">
-          <select class="selectpicker">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Relish</option>
-            <option disabled>Onions</option>
-          </select>        
-        </div>
                 
         <form role="form" class="search-pf has-button">
           <div class="form-group has-clear">
@@ -97,8 +89,6 @@
           </div>
         </form>
       </div><!-- header -->
- 
-
  
       <div class="row thumbnails">
 
@@ -132,8 +122,6 @@
             </span>
           </a>
         </div>
-
-
         <div class="col-sm-4 col-md-3">
           <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
             <div class="favorite active"><i class="fa fa-star fa-lg"></i></div>
@@ -158,8 +146,6 @@
             <img src="img/help_support.png">
           </a>
         </div>
-
-
         <div class="col-sm-4 col-md-3">
           <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
             <div class="favorite active"><i class="fa fa-star fa-lg"></i></div>
@@ -184,8 +170,6 @@
             <img src="img/help_support.png">
           </a>
         </div>
-
-
         <div class="col-sm-4 col-md-3">
           <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
             <div class="favorite active"><i class="fa fa-star fa-lg"></i></div>
@@ -218,47 +202,37 @@
     </div><!-- /container -->
 
     <!-- JS -->
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="node_modules/patternfly/components/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/patternfly/components/bootstrap-select/bootstrap-select.min.css"></script>
-    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js"></script>
-    
-    
     <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
 
-
-<script>
-  (function($) {
-    $(document).ready(function() {
-      // Hide the clear button if the search input is empty
-      $(".search-pf .has-clear .clear").each(function() {
-        if (!$(this).prev('.form-control').val()) {
-          $(this).hide();
-        }
-      });
-      // Show the clear button upon entering text in the search input
-      $(".search-pf .has-clear .form-control").keyup(function () {
-        var t = $(this);
-        t.next('button').toggle(Boolean(t.val()));
-      });
-      // Upon clicking the clear button, empty the entered text and hide the clear button
-      $(".search-pf .has-clear .clear").click(function () {
-        $(this).prev('.form-control').val('').focus();
-        $(this).hide();
-      });
-    });
-    
-    
-    $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-    
-  })(jQuery);
-</script>      
-
-
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          // Hide the clear button if the search input is empty
+          $(".search-pf .has-clear .clear").each(function() {
+            if (!$(this).prev('.form-control').val()) {
+              $(this).hide();
+            }
+          });
+          // Show the clear button upon entering text in the search input
+          $(".search-pf .has-clear .form-control").keyup(function () {
+            var t = $(this);
+            t.next('button').toggle(Boolean(t.val()));
+          });
+          // Upon clicking the clear button, empty the entered text and hide the clear button
+          $(".search-pf .has-clear .clear").click(function () {
+            $(this).prev('.form-control').val('').focus();
+            $(this).hide();
+          });
+        });    
+        
+        $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+        
+      })(jQuery);
+    </script>      
 
 
   </body>
